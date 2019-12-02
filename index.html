@@ -2,11 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Fill Me In">
-<meta name="author" content="John Doe">
 
-<!-- This start file was build by Paul Cheney  -->
-<title>HTML5 Start Site by Paul Cheney</title>
+<title>Swag Shop</title>
 
 <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,7 +13,7 @@
 
 <!-- STYLE SHEETS -->
 <link href="css/styles.css" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=Mukta:400,700&display=swap" rel="stylesheet">
 
 
 
@@ -24,45 +21,83 @@
 <body>
 <!-- HEADER HERE -->
 <div id='headerWrapper'>
-	<header>
- <h1>Company Name Here</h1>
-        <h2>Possible Slogan or Tagline</h2>
+	<header class="clearfix">
+        <img class="logo" src="images/164-1646356_snapback-clipart-outline-cap-clipart-png-black-and.png">
+        <h1>The Swag Shop</h1>
     </header>
 </div>
 <!-- end of headWraper -->
     
 <!-- NAVIGATION HERE -->
-<nav class="clearfix">
-    <button id="hamburgerBtn"><span><i>&equiv;</i>OPEN</span> <span><i>&otimes;</i>CLOSE</span></button>
-    <ul id="primaryNav">
-        <li><a href="#">Home</a></li>
-        <li class="current-menu-item"><a href="#">Products</a></li>
-        <li><a href="#">Sales</a></li>
-        <li class="parent"><a href="#">Location</a>
-            <ul>
-                <li><a href="#">Here</a></li>
-                <li><a href="#">There</a></li>
-                <li><a href="#">Everywhere</a></li>
+<div>
+    <nav class="clearfix">
+        <button id="hamburgerBtn"><span><i>&equiv;</i>OPEN</span> <span><i>&otimes;</i>CLOSE</span></button>
+            <ul id="primaryNav">
+                <li><a href="#">Home</a></li>
+                <li class="current-menu-item"><a href="#">Products</a></li>
+                <li><a href="#">Deals</a></li>
+                <li class="parent"><a href="#">Order</a>
+                    <ul>
+                        <li><a href="#">Water Bottles</a></li>
+                        <li><a href="#">Hats</a></li>
+                        <li><a href="#">Shirts</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Customer Reviews</a></li> 
+                <li><a href="#">Contact Us</a></li>
             </ul>
-        </li>
-        <li><a href="#">Contact</a></li> 
-
-    </ul>
-</nav>
+        </nav>
+</div>
 <!-- end of navWrapper -->
     
 <!-- CONTENT HERE -->
 <div id="mainWrapper">
     <main>
-        <h1>Products</h1>
-        <p>The page name should almost exactly match the menu item. </p>
+        <h2 class="order">Order</h2>
+        <form method="get" action="thanks.html">
+            <fieldset>
+                <legend>Customer Information</legend>
+                <label class="top">Full Name: <input type="text" name="fname" required></label>
+                <label class="top">Phone: <input type="tel" name="phone" required></label>
+                <label class="top">Email: <input type="email" name="email"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Swag Information</legend>
+                <label class="top">Date Needed: <input type="date" name="dateNeeded" required></label>
+                <label class="top">Business Name: <input type="text" name="name" required></label>
+                <label class="top">Business URL: <input type="url" name="url" required></label>
+                <label class="top">Color: <select name="color">
+                    <option value="">PLEASE SELECT</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="purple">Purple</option>
+                    <option value="orange">Orange</option>
+                </select>
+                </label>
+                <label class="top">Quantity: <input type="number" name="quantity" required></label>
+                <div>Material:</div>
+                <label class="sbs"><input type="radio" name="material" value="aluminum">Aluminum</label>
+                <label class="sbs"><input type="radio" name="material" value="plastic">Plastic</label>
+            </fieldset>
+            <fieldset>
+                <legend>Payment Information</legend>
+                <label class="top">Name on Card: <input type="text" name="cardName" required></label>
+                <label class="top">Card Number: <input type="number" name="cardNumber" required></label>
+                <label class="top">Expiration Date: <input type="date" name="expDate" required></label>
+            </fieldset>
+            <a href="thanks.html"><input class="submitButton" type="submit" value="ORDER MY SWAG"></a>
+        </form>
     </main>
 </div>
 <!-- end of mainWrapper -->
 <!-- FOOTER HERE -->  
 <div id="footerWrapper">
     <footer>
-        &copy; 201x &bull; Paul Cheney &bull; 123-555-6789
+        &copy; 2019 &bull; David Enciso &bull; 123-456-7890
     </footer>
 </div> 
 <!-- end of footerWrapper -->

@@ -17,11 +17,15 @@ header {
     padding: .5rem 2%;
     background-color: #ddd;
 }
-header h1 {margin: 0;}
+header h1 {
+    margin: 0;
+}
 header h2 {margin: 0; font-weight: normal;}
+.logo {
+    max-width: 25%;
+}
 
 /*----------- NAVIGATION --------------*/
-
 
 
 /*----------- MAIN --------------*/
@@ -30,6 +34,73 @@ main {
     min-height: 10rem;
 }
 
+.order {
+    margin: 2%;
+}
+
+.thanks {
+    margin: 2%;
+}
+
+/*----------- FORM --------------*/
+
+form fieldset {
+    margin: 2%;
+    border: 1px solid $primaryColor;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+form legend {
+    color: $primaryColor;
+    margin: 2%;
+    padding: 2%;
+}
+
+form label.top, form div {
+    display: block;
+    padding-top: 2%;
+    color: $primaryColor;
+    font-size: 1rem;
+}
+
+form label.top input, form label.top select {
+    display: block;
+    font-size: 1rem;
+    border: solid 1px $primaryColor;
+    border-radius: 4px;
+    padding: 2%;
+    color: $primaryColor;
+    width: 100%;
+    max-width: 25rem;
+    background-color: white;
+}
+
+form label.sbs {
+    display: block;
+    padding: 1% 0;
+    color: $primaryColor;
+    font-size: 1.25rem;
+}
+
+form input.submitButton {
+    border: none;
+    background-color: $secondaryColor;
+    color: white;
+    border-radius: 1rem;
+    padding: 4%;
+    margin: 5% 4%;
+    width: 96%;
+    max-width: 25rem;
+}
+
+form label.top input:required {
+    border-left: red solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+}
 
 /*----------- FOOTER --------------*/
 footer {
